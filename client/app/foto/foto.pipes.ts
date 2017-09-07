@@ -1,13 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { FotoComponent } from './foto.component';
 
 @Pipe({
-    name: 'filtroPortTitulo'
+    name: 'filtroPorTitulo'
 })
-
 export class FiltroPorTitulo implements PipeTransform {
 
-    transform(fotos, digitado){
-        digitado = digitado.toLowercase();
-        return fotos.filter( foto => foto.titulo.toLowercase().includes(digitado));
+    transform(fotos: FotoComponent[], digitado: string): FotoComponent[] {
+
+        digitado = digitado.toLowerCase();
+        return fotos.filter( foto => foto.titulo.toLowerCase().includes(digitado));
     }
- }
+}

@@ -9,4 +9,4 @@ import { FiltroPorTitulo } from './foto.pipes';
     exports: [ FotoComponent, FiltroPorTitulo ]
 })
 
-export class FotoModule{}
+export class FotoModule { }
