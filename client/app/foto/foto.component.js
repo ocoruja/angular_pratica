@@ -8,27 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var FotoComponent = (function () {
-    function FotoComponent() {
-    }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], FotoComponent.prototype, "titulo", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], FotoComponent.prototype, "url", void 0);
-    FotoComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'foto',
-            templateUrl: './foto.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], FotoComponent);
-    return FotoComponent;
-}());
+const core_1 = require('@angular/core');
+let FotoComponent = class FotoComponent {
+};
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', String)
+], FotoComponent.prototype, "titulo", void 0);
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', String)
+], FotoComponent.prototype, "url", void 0);
+FotoComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'foto',
+        templateUrl: './foto.component.html'
+    }), 
+    __metadata('design:paramtypes', [])
+], FotoComponent);
 exports.FotoComponent = FotoComponent;
 //# sourceMappingURL=foto.component.js.map

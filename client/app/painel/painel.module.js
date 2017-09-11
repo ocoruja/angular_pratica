@@ -8,19 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var painel_component_1 = require('./painel.component');
-var PainelModule = (function () {
-    function PainelModule() {
-    }
-    PainelModule = __decorate([
-        core_1.NgModule({
-            declarations: [painel_component_1.PainelComponent],
-            exports: [painel_component_1.PainelComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], PainelModule);
-    return PainelModule;
-}());
+const core_1 = require('@angular/core');
+const painel_component_1 = require('./painel.component');
+let PainelModule = class PainelModule {
+};
+PainelModule = __decorate([
+    core_1.NgModule({
+        declarations: [painel_component_1.PainelComponent],
+        exports: [painel_component_1.PainelComponent]
+    }), 
+    __metadata('design:paramtypes', [])
+], PainelModule);
 exports.PainelModule = PainelModule;
 //# sourceMappingURL=painel.module.js.map

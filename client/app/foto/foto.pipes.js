@@ -8,21 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var FiltroPorTitulo = (function () {
-    function FiltroPorTitulo() {
-    }
-    FiltroPorTitulo.prototype.transform = function (fotos, digitado) {
+const core_1 = require('@angular/core');
+let FiltroPorTitulo = class FiltroPorTitulo {
+    transform(fotos, digitado) {
         digitado = digitado.toLowerCase();
-        return fotos.filter(function (foto) { return foto.titulo.toLowerCase().includes(digitado); });
-    };
-    FiltroPorTitulo = __decorate([
-        core_1.Pipe({
-            name: 'filtroPorTitulo'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], FiltroPorTitulo);
-    return FiltroPorTitulo;
-}());
+        return fotos.filter(foto => foto.titulo.toLowerCase().includes(digitado));
+    }
+};
+FiltroPorTitulo = __decorate([
+    core_1.Pipe({
+        name: 'filtroPorTitulo'
+    }), 
+    __metadata('design:paramtypes', [])
+], FiltroPorTitulo);
 exports.FiltroPorTitulo = FiltroPorTitulo;
 //# sourceMappingURL=foto.pipes.js.map

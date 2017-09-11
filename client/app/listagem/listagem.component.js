@@ -8,32 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-var ListagemComponent = (function () {
+const core_1 = require('@angular/core');
+const http_1 = require('@angular/http');
+let ListagemComponent = class ListagemComponent {
     //fotos: Array<Object> = []; Essa sintaxe é a mesma da sintaxe acima
-    function ListagemComponent(http) {
+    constructor(http) {
         //let stream = http.get('v1/fotos');
         //stream.subscribe(function(res){
-        var _this = this;
         this.fotos = [];
         http
             .get('v1/fotos')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (fotos) {
-            _this.fotos = fotos;
-            console.log(_this.fotos);
-        }, function (erro) { return console.log(erro); });
+            .map(res => res.json())
+            .subscribe(fotos => {
+            this.fotos = fotos;
+            console.log(this.fotos);
+        }, erro => console.log(erro));
     }
-    ListagemComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'listagem',
-            templateUrl: './listagem.component.html'
-        }), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], ListagemComponent);
-    return ListagemComponent;
-}());
+};
+ListagemComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'listagem',
+        templateUrl: './listagem.component.html'
+    }), 
+    __metadata('design:paramtypes', [http_1.Http])
+], ListagemComponent);
 exports.ListagemComponent = ListagemComponent;
 //# sourceMappingURL=listagem.component.js.map

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 // adicionar Input quando receber o "titulo" como parametro
 
 @Component({
@@ -8,7 +8,13 @@ import { Component, Input } from '@angular/core';
     templateUrl: './painel.component.html'
 })
 
-export class PainelComponent{
+export class PainelComponent implements OnInit{
 
     @Input() titulo: string;
+    
+    ngOnInit() {
+        this.titulo = this.titulo.length > 7
+        ? this.titulo.substr(0,7) + '...'
+        : this.titulo;
+    }
 }
